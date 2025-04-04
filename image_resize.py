@@ -24,7 +24,7 @@ def resize_images(input_folder, output_folder, scale_factor=4):
         # 新しいファイル名で出力フォルダに保存（PNG形式）
         new_filename = f"resized_{os.path.splitext(filename)[0]}.png"
         cv2.imwrite(os.path.join(output_folder, new_filename), resized_img)
-        print(f"Resized and saved {filename} as {new_filename}")
+        tqdm.write(f"Resized and saved {filename} as {new_filename}")
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Resize images using bicubic interpolation.')
