@@ -27,7 +27,6 @@ def resize_images(input_folder, output_folder, scale_factor=4):
         print(f"Resized and saved {filename} as {new_filename}")
 
 if __name__ == "__main__":
-    main()
     parser = argparse.ArgumentParser(description='Resize images using bicubic interpolation.')
     parser.add_argument('input_folder', type=str, help='Path to the input folder containing images.')
     parser.add_argument('output_folder', type=str, help='Path to the output folder to save resized images.')
