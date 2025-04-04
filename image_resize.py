@@ -21,9 +21,7 @@ def resize_images(input_folder, output_folder, scale_factor=4):
             resized_img = cv2.resize(img, new_size, interpolation=cv2.INTER_CUBIC)
 
             # 新しいファイル名で出力フォルダに保存
-            # new_filename = f"resized_{filename}"
-            # 別のフォルダなら、そのままのファイル名で保存
-            new_filename = filename
+            new_filename = f"{os.path.splitext(filename)[0]}.png"
             cv2.imwrite(os.path.join(output_folder, new_filename), resized_img)
             print(f"Resized and saved {filename} as {new_filename}")
 
